@@ -1,0 +1,38 @@
+@media screen and (max-width: 1150px) {
+  main section.gallery article {
+    grid-template-columns: 1fr;
+  }
+  main section.gallery article aside {
+    height: 500px;
+  }
+  main section.gallery article aside div.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+  main section.gallery article aside div.overlay h2 {
+    margin-top: 0px;
+  }
+  main section.gallery article aside div.overlay div.center {
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0px 20px;
+  }
+  main section {
+    width: 100%;
+  }
+  main section.banner {
+    height: 700px;
+    background-position: 25%;
+  }
+  div.chat {
+    border-radius: 50%;
+    bottom: 50px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

@@ -1,0 +1,38 @@
+@use "./variables" as *;
+
+@mixin flex($gap: 0px, $j-c: center, $a-i: center) {
+  display: flex;
+  justify-content: $j-c;
+  align-items: $a-i;
+  gap: $gap;
+}
+
+@mixin button($font-size: 1rem) {
+  width: 142px;
+  height: 40px;
+  border: 1px solid $white-color;
+  background-color: transparent;
+  color: $white-color;
+  font-family: $primary-font;
+  font-weight: 300;
+  font-size: $font-size;
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: $hover-color;
+    border-color: transparent;
+  }
+}
+
+@mixin heading(
+  $color: $black-color,
+  $font-size: 40px,
+  $font-weight: 300,
+  $font-style: $secondary-font
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-style: $font-style;
+  color: $color;
+  text-align: center;
+}

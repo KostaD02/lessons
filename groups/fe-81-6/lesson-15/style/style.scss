@@ -1,0 +1,230 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: $primary-font;
+  color: $black-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $secondary-font;
+}
+
+header {
+  width: 100%;
+  padding: 0px 81px;
+  background-color: $white-color;
+
+  nav {
+    div.container-fluid {
+      padding: 0px;
+    }
+
+    div.collapse {
+      justify-content: flex-end;
+    }
+
+    ul {
+      gap: 20px;
+    }
+
+    a.navbar-brand,
+    ul li a {
+      font-size: 16px;
+      color: $black-color;
+      transition: 0.5s ease;
+
+      &.active {
+        color: $active-color !important;
+      }
+    }
+
+    a.navbar-brand {
+      font-size: 26px;
+      font-family: $secondary-font;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  box-sizing: border-box;
+  padding-top: 65px;
+
+  section {
+    width: 93.6%;
+
+    &.banner {
+      height: 900px;
+      position: relative;
+      background-image: url("https://static.wixstatic.com/media/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg/v1/fill/w_2383,h_900,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: 0.5s ease;
+
+      div.overlay {
+        @include flex;
+
+        article {
+          h1,
+          h3 {
+            color: $white-color;
+            text-align: center;
+            font-weight: 300;
+          }
+
+          h1 {
+            font-size: clamp(34px, 5vw, 70px);
+            letter-spacing: 0.1em;
+          }
+
+          h3 {
+            font-size: clamp(14px, 5vw, 20px);
+            font-family: $primary-font;
+            letter-spacing: 0.5em;
+          }
+
+          div {
+            @include flex;
+            margin-top: 25px;
+
+            button {
+              @include button;
+            }
+          }
+        }
+      }
+    }
+
+    &.gallery {
+      h1 {
+        @include heading;
+      }
+
+      h2 {
+        @include heading($white-color);
+        margin-top: 80px;
+      }
+
+      article {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        transition: 0.5s ease;
+        gap: 25px;
+
+        aside {
+          width: 100%;
+          height: 869px;
+          position: relative;
+          background-image: url("https://static.wixstatic.com/media/f61af8_2ef1fc57fdd849a19df076e8fb6e036f~mv2_d_2681_2546_s_4_2.jpg/v1/fill/w_801,h_869,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_2ef1fc57fdd849a19df076e8fb6e036f~mv2_d_2681_2546_s_4_2.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          transition: 0.5s ease;
+
+          &:nth-child(2) {
+            background-image: url("https://static.wixstatic.com/media/f61af8_0865ef003a1740f9b703014d3b57e3fa~mv2_d_4928_3264_s_4_2.jpg/v1/fill/w_779,h_869,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_0865ef003a1740f9b703014d3b57e3fa~mv2_d_4928_3264_s_4_2.jpg");
+          }
+
+          &:nth-child(3) {
+            background-image: url("https://static.wixstatic.com/media/f61af8_0ecca2bc73f444c98e8de071bb2ce81c~mv2_d_1927_1272_s_2.jpg/v1/fill/w_781,h_869,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_0ecca2bc73f444c98e8de071bb2ce81c~mv2_d_1927_1272_s_2.jpg");
+          }
+
+          div.center {
+            margin-top: 20px;
+            @include flex;
+
+            button {
+              @include button;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: $overlay-color;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 20px 0px;
+  @include flex;
+
+  section {
+    min-width: 260px;
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    place-items: center;
+
+    aside {
+      ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        @include flex(2rem);
+
+        li {
+          a {
+            color: $black-color;
+            transition: 0.5s;
+            font-size: 20px;
+
+            &:hover {
+              color: $hover-color;
+            }
+          }
+        }
+      }
+
+      p {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        color: $black-color;
+      }
+    }
+  }
+}
+
+div.chat {
+  width: 64px;
+  height: 64px;
+  background-color: $violet-color;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  @include flex;
+
+  i {
+    font-size: 35px;
+    color: white;
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    i {
+      color: $hover-color;
+    }
+  }
+}

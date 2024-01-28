@@ -1,0 +1,50 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+@media screen and (max-width: 1150px) {
+  main {
+    section {
+      &.gallery {
+        article {
+          grid-template-columns: 1fr;
+
+          aside {
+            height: 500px;
+
+            div.overlay {
+              @include flex;
+              h2 {
+                margin-top: 0px;
+              }
+              div.center {
+                margin: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0px 20px;
+  }
+
+  main {
+    section {
+      width: 100%;
+
+      &.banner {
+        height: 700px;
+        background-position: 25%;
+      }
+    }
+  }
+
+  div.chat {
+    border-radius: 50%;
+    bottom: 50px;
+  }
+}
