@@ -1,1 +1,3 @@
-# lessons
+# Lessons
+
+As a lecturer at [IT Academy Step](https://ge.itstep.org/), I find myself working with different groups regularly. Each time, I am required to create a new repository on GitHub and subsequently delete it after the lesson. Therefore, I have contemplated the idea of consolidating all these repositories into a single location. The purpose of this repository is to house some of my lessons from various steps, which I have chosen to publish for educational purposes. It is important to note that every piece of code is crafted with the intention of providing students with a hands-on experience based on these lessons.
