@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+
+  main {
+    padding: 65px 0 0;
+  }
+
+  div.chat {
+    border-radius: 50%;
+    bottom: 90px;
+  }
+}
