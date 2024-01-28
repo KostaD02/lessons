@@ -1,0 +1,64 @@
+@use "variables" as *;
+
+@mixin flex($jc: center, $ai: center, $gap: 0) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+}
+
+@mixin font(
+  $size: 16px,
+  $color: $black-color,
+  $family: $primary-font,
+  $weight: 400,
+  $style: normal,
+  $text-align: center
+) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+  font-style: $style;
+  color: $color;
+  text-align: $text-align;
+}
+
+@mixin anchor(
+  $size: 16px,
+  $color: $black-color,
+  $family: $primary-font,
+  $weight: 400,
+  $style: normal,
+  $text-align: start
+) {
+  @include font($size, $color, $family, $weight, $style, $text-align);
+  text-decoration: none;
+  transition: 0.5s ease;
+
+  &:hover {
+    color: $active-color !important;
+  }
+}
+
+@mixin button(
+  $fs: 16px,
+  $color: $white-color,
+  $padding: 10px 40px,
+  $bg-color: transparent,
+  $border: 1px solid $white-color
+) {
+  font-size: $fs;
+  font-weight: 300;
+  font-family: $secondary-font;
+  color: $color;
+  text-decoration: none;
+  background-color: $bg-color;
+  padding: $padding;
+  border: $border;
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: $hover-color;
+    border-color: transparent;
+  }
+}

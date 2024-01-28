@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #303131;
+  font-family: "Cinzel", serif;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 0 80px;
+  z-index: 100;
+}
+header nav div.container-fluid a {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #303131;
+  text-align: start;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+header nav div.container-fluid a:hover {
+  color: #5c6b7a !important;
+}
+header nav div.container-fluid a.navbar-brand {
+  font-size: 26px;
+  font-family: "Cinzel", serif;
+}
+header nav div.container-fluid a.active {
+  color: #5c6b7a !important;
+}
+header nav div.container-fluid div.collapse {
+  justify-content: flex-end;
+}
+header nav div.container-fluid div.collapse ul {
+  column-gap: 20px;
+}
+
+main {
+  width: 100%;
+  padding: 65px 80px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+main div.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(39, 58, 78, 0.4);
+}
+main section {
+  width: 100%;
+}
+main section.banner {
+  height: 900px;
+  background-image: url("https://static.wixstatic.com/media/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg/v1/fill/w_2383,h_900,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+main section.banner div.overlay article h1 {
+  font-size: clamp(40px, 3vw, 70px);
+  font-weight: 400;
+  font-family: "Cinzel", serif;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 10px;
+}
+main section.banner div.overlay article h3 {
+  font-size: clamp(18px, 3vw, 20px);
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 10px;
+  margin-bottom: 2em;
+}
+main section.banner div.overlay article div.flex-center a {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 10px 40px;
+  border: 1px solid #fff;
+  transition: 0.5s ease;
+}
+main section.banner div.overlay article div.flex-center a:hover {
+  background-color: #273a4e;
+  border-color: transparent;
+}
+
+footer {
+  width: 100%;
+  padding: 20px 0;
+}
+footer section {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+footer section ul.flex-center {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 20px;
+}
+footer section ul.flex-center li a {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Cinzel", serif;
+  font-style: normal;
+  color: #303131;
+  text-align: start;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+footer section ul.flex-center li a:hover {
+  color: #5c6b7a !important;
+}
+footer section h4 {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #303131;
+  text-align: center;
+}
+
+div.chat {
+  width: 64px;
+  height: 64px;
+  background-color: #b0879c;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+div.chat i {
+  color: #fff;
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

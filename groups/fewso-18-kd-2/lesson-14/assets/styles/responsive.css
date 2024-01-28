@@ -1,0 +1,17 @@
+@media screen and (max-width: 990px) {
+  header {
+    padding: 0 10px;
+  }
+  main {
+    padding: 65px 0 0;
+  }
+  main section.banner {
+    background-position: 30%;
+  }
+  div.chat {
+    border-radius: 50%;
+    bottom: 65px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */
