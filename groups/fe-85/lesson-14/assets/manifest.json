@@ -1,0 +1,31 @@
+{
+  "name": "THE ART OF FOOD • J . A L I S S A",
+  "short_name": "THE ART OF FOOD",
+  "theme_color": "#5c6b7a",
+  "background_color": "#273a4e4d",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "./images/icon.ico",
+      "sizes": "72x72",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./images/icon.ico",
+      "sizes": "96x96",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./images/icon.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./images/icon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}

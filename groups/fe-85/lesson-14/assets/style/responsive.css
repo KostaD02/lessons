@@ -1,0 +1,44 @@
+@media screen and (max-width: 990px) {
+  div.chat {
+    border-radius: 50%;
+  }
+  main section.portfolio article {
+    grid-template-columns: 1fr;
+  }
+  main section.portfolio article aside {
+    height: 500px;
+  }
+  main section.portfolio article aside div.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-direction: row;
+    flex-direction: column;
+    gap: 20px;
+  }
+  main section.portfolio article aside div.overlay h3 {
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+  main {
+    padding: 85px 0 0;
+  }
+  main section.about {
+    background-position: 25%;
+  }
+  footer article h4 {
+    max-width: 25ch;
+  }
+}
+@media screen and (max-width: 400px) {
+  div.chat {
+    bottom: 100px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

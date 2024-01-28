@@ -1,0 +1,42 @@
+@use "variables.scss" as *;
+
+@mixin flex($jc: center, $ai: center, $gap: 0, $row: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+  flex-direction: $row;
+}
+
+@mixin overlay($color: $overlay-color) {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $color;
+}
+
+@mixin button($color: $white-color, $fs: 16px) {
+  color: $color;
+  border: 1px solid $color;
+  font-weight: 300;
+  font-size: $fs;
+  background-color: transparent;
+  transition: 0.65s ease;
+  text-decoration: none;
+  padding: 8px 35px;
+
+  &:hover {
+    background-color: $button-bg-color;
+    border-color: transparent;
+  }
+}
+
+@mixin header-text($color: $black-color, $fs: 40px, $fm: $primary-font) {
+  font-size: $fs;
+  font-family: $fm;
+  font-weight: 300;
+  color: $color;
+  text-align: center;
+}

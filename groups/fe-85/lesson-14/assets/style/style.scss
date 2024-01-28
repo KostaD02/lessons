@@ -1,0 +1,213 @@
+@use "variables.scss" as *;
+@use "mixins" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  color: $black-color;
+}
+
+.flex-center {
+  @include flex;
+}
+
+header {
+  width: 100%;
+  padding: 10px 60px;
+  box-sizing: border-box;
+  background-color: $white-color;
+
+  nav {
+    a {
+      font-size: 16px;
+      font-family: $secondary-font;
+      color: $black-color !important;
+      text-decoration: none;
+      transition: 0.5s ease;
+
+      &:hover {
+        color: $active-color;
+      }
+    }
+
+    div.container-fluid {
+      a.navbar-brand {
+        font-family: $primary-font;
+        font-size: 26px;
+      }
+      div.collapse {
+        justify-content: flex-end;
+
+        ul {
+          li {
+            a {
+              &.active {
+                color: $active-color !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  padding: 85px 60px 0;
+
+  section {
+    width: 100%;
+
+    &.about {
+      height: 900px;
+      background-image: url("https://static.wixstatic.com/media/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg/v1/fill/w_2383,h_900,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+      div.overlay {
+        article {
+          font-family: $secondary-font;
+          text-align: center;
+
+          h1 {
+            font-size: clamp(40px, 3vw, 70px);
+            font-family: $primary-font;
+            color: $white-color;
+            font-weight: 300;
+            letter-spacing: 8px;
+          }
+
+          h3 {
+            color: $white-color;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 10px;
+            margin-bottom: 1.5em;
+          }
+
+          div.flex-center {
+            a {
+              @include button();
+            }
+          }
+        }
+      }
+    }
+
+    &.portfolio {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+
+      h2 {
+        @include header-text;
+      }
+
+      article {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        gap: 25px;
+
+        aside {
+          width: 100%;
+          height: 869px;
+          position: relative;
+          background-image: url("https://static.wixstatic.com/media/f61af8_2ef1fc57fdd849a19df076e8fb6e036f~mv2_d_2681_2546_s_4_2.jpg/v1/fill/w_801,h_869,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_2ef1fc57fdd849a19df076e8fb6e036f~mv2_d_2681_2546_s_4_2.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+
+          &:nth-child(2) {
+            background-image: url("https://static.wixstatic.com/media/f61af8_0865ef003a1740f9b703014d3b57e3fa~mv2_d_4928_3264_s_4_2.jpg/v1/fill/w_779,h_869,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_0865ef003a1740f9b703014d3b57e3fa~mv2_d_4928_3264_s_4_2.jpg");
+          }
+
+          &:nth-child(3) {
+            background-image: url("https://static.wixstatic.com/media/f61af8_0ecca2bc73f444c98e8de071bb2ce81c~mv2_d_1927_1272_s_2.jpg/v1/fill/w_781,h_869,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_0ecca2bc73f444c98e8de071bb2ce81c~mv2_d_1927_1272_s_2.jpg");
+          }
+
+          div.overlay {
+            h3 {
+              @include header-text($white-color);
+              margin: 70px 0px 30px;
+            }
+
+            div.flex-center {
+              a {
+                @include button;
+                font-family: $secondary-font;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    div.overlay {
+      @include overlay;
+    }
+  }
+}
+
+footer {
+  padding: 20px;
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 10px;
+
+    ul.flex-center {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      gap: 25px;
+
+      li {
+        a {
+          font-size: 20px;
+          color: $black-color;
+          transition: 0.5s ease;
+
+          &:hover {
+            color: $active-color;
+          }
+        }
+      }
+    }
+
+    h4 {
+      font-size: 16px;
+      text-align: center;
+      color: $black-color;
+      font-family: $secondary-font;
+      font-weight: 300;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+div.chat {
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: $pink-color;
+
+  i {
+    font-size: 25px;
+    color: $white-color;
+  }
+}
