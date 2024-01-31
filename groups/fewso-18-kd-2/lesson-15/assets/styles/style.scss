@@ -146,6 +146,56 @@ main {
         }
       }
     }
+
+    &.about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      aside {
+        width: 100%;
+        height: 100%;
+        background-color: $gray-color;
+        padding: 25px;
+
+        @include flex(center, center, 20px, column);
+
+        h1,
+        h3,
+        p {
+          width: 100%;
+          max-width: 425px;
+          text-align: left;
+        }
+
+        h1 {
+          @include font(
+            clamp(30px, 3vw, 40px),
+            $black-color,
+            $primary-font,
+            400,
+            normal,
+            left
+          );
+        }
+
+        h3 {
+          @include font(20px, $black-color, $secondary-font, 300, normal, left);
+          margin: 25px 0 0;
+        }
+
+        p {
+          @include font(16px, $black-color, $secondary-font, 300, normal, left);
+        }
+      }
+    }
   }
 }
 

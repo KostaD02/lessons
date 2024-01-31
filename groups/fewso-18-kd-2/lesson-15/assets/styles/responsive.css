@@ -24,6 +24,9 @@
   main section.portfolio article aside div.overlay h2 {
     margin: 0;
   }
+  main section.about {
+    grid-template-columns: 1fr;
+  }
   div.chat {
     border-radius: 50%;
     bottom: 65px;
