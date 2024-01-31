@@ -1,0 +1,144 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $black-color;
+  font-family: $primary-font;
+}
+
+.flex-center {
+  @include flex;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white-color;
+  padding: 0 80px;
+  z-index: 100;
+
+  nav {
+    div.container-fluid {
+      a {
+        @include anchor(16px, $black-color, $secondary-font, 300);
+
+        &.navbar-brand {
+          font-size: 26px;
+          font-family: $primary-font;
+        }
+
+        &.active {
+          color: $active-color !important;
+        }
+      }
+
+      div.collapse {
+        justify-content: flex-end;
+
+        ul {
+          column-gap: 20px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  padding: 65px 80px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+
+  div.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: $overlay-color;
+  }
+
+  section {
+    width: 100%;
+
+    &.banner {
+      height: 900px;
+      background-image: url("https://static.wixstatic.com/media/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg/v1/fill/w_2383,h_900,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+
+      div.overlay {
+        article {
+          h1 {
+            @include font(clamp(40px, 3vw, 70px), $white-color);
+            letter-spacing: 10px;
+          }
+
+          h3 {
+            @include font(
+              clamp(18px, 3vw, 20px),
+              $white-color,
+              $secondary-font,
+              300
+            );
+            letter-spacing: 10px;
+            margin-bottom: 2em;
+          }
+
+          div.flex-center {
+            a {
+              @include button;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 20px 0;
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+
+    ul.flex-center {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      gap: 20px;
+
+      li {
+        a {
+          @include anchor(20px);
+        }
+      }
+    }
+
+    h4 {
+      @include font(16px, $black-color, $secondary-font, 300);
+    }
+  }
+}
+
+div.chat {
+  width: 64px;
+  height: 64px;
+  background-color: $pink-color;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  i {
+    color: $white-color;
+    font-size: 30px;
+  }
+}
