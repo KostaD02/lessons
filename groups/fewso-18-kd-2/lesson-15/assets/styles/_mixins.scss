@@ -1,9 +1,10 @@
 @use "variables" as *;
 
-@mixin flex($jc: center, $ai: center, $gap: 0) {
+@mixin flex($jc: center, $ai: center, $gap: 0, $fd: row) {
   display: flex;
   justify-content: $jc;
   align-items: $ai;
+  flex-direction: $fd;
   gap: $gap;
 }
 

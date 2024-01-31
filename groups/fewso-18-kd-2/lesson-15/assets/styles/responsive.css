@@ -8,6 +8,22 @@
   main section.banner {
     background-position: 30%;
   }
+  main section.portfolio article {
+    grid-template-columns: 1fr;
+  }
+  main section.portfolio article aside {
+    height: 500px;
+  }
+  main section.portfolio article aside div.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  main section.portfolio article aside div.overlay h2 {
+    margin: 0;
+  }
   div.chat {
     border-radius: 50%;
     bottom: 65px;

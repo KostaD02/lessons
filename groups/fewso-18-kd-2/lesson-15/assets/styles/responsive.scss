@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 @media screen and (max-width: 990px) {
   header {
     padding: 0 10px;
@@ -9,6 +12,23 @@
     section {
       &.banner {
         background-position: 30%;
+      }
+
+      &.portfolio {
+        article {
+          grid-template-columns: 1fr;
+
+          aside {
+            height: 500px;
+            div.overlay {
+              @include flex(center, center, 20px, column);
+
+              h2 {
+                margin: 0;
+              }
+            }
+          }
+        }
       }
     }
   }
