@@ -33,7 +33,7 @@
     gap: 25px;
   }
   main section.books article {
-    padding: 10px;
+    padding: 30px 10px;
   }
   main section.books article div.wrap {
     grid-template-columns: 1fr;
