@@ -34,6 +34,25 @@
       &.about {
         grid-template-columns: 1fr;
       }
+
+      &.books {
+        gap: 25px;
+
+        article {
+          padding: 10px;
+
+          div.wrap {
+            grid-template-columns: 1fr;
+            place-items: center;
+            gap: 25px;
+
+            img {
+              min-height: fit-content;
+              object-fit: contain;
+            }
+          }
+        }
+      }
     }
   }
 

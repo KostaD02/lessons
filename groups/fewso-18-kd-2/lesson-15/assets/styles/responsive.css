@@ -16,9 +16,11 @@
   }
   main section.portfolio article aside div.overlay {
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    align-content: flex-start;
     gap: 20px;
   }
   main section.portfolio article aside div.overlay h2 {
@@ -26,6 +28,21 @@
   }
   main section.about {
     grid-template-columns: 1fr;
+  }
+  main section.books {
+    gap: 25px;
+  }
+  main section.books article {
+    padding: 10px;
+  }
+  main section.books article div.wrap {
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 25px;
+  }
+  main section.books article div.wrap img {
+    min-height: fit-content;
+    object-fit: contain;
   }
   div.chat {
     border-radius: 50%;

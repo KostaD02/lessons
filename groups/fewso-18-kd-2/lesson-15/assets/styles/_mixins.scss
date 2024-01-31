@@ -1,10 +1,19 @@
 @use "variables" as *;
 
-@mixin flex($jc: center, $ai: center, $gap: 0, $fd: row) {
+@mixin flex(
+  $jc: center,
+  $ai: center,
+  $gap: 0,
+  $fd: row,
+  $ac: flex-start,
+  $fw: nowrap
+) {
   display: flex;
+  flex-wrap: $fw;
+  flex-direction: $fd;
   justify-content: $jc;
   align-items: $ai;
-  flex-direction: $fd;
+  align-content: $ac;
   gap: $gap;
 }
 
@@ -46,7 +55,8 @@
   $color: $white-color,
   $padding: 10px 40px,
   $bg-color: transparent,
-  $border: 1px solid $white-color
+  $border: 1px solid $white-color,
+  $hover-text-color: $white-color
 ) {
   font-size: $fs;
   font-weight: 300;
@@ -61,5 +71,6 @@
   &:hover {
     background-color: $hover-color;
     border-color: transparent;
+    color: $hover-text-color;
   }
 }

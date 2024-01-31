@@ -196,6 +196,91 @@ main {
         }
       }
     }
+
+    &.books {
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: center;
+      gap: 10px;
+
+      h1 {
+        @include font(clamp(30px, 3vw, 40px), $black-color, $primary-font);
+      }
+
+      article {
+        width: 100%;
+        background-color: $gray-color;
+        @include flex;
+        padding: 50px;
+
+        div.wrap {
+          width: 100%;
+          max-width: 970px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 100px;
+
+          img {
+            width: 100%;
+            min-height: 430px;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          aside {
+            @include flex(flex-start, center, 5px, row, center, wrap);
+
+            h2 {
+              width: 100%;
+              @include font(
+                clamp(30px, 3vw, 64px),
+                $black-color,
+                $primary-font,
+                400,
+                normal,
+                left
+              );
+            }
+
+            p {
+              width: 100%;
+              @include font(
+                16px,
+                $black-color,
+                $secondary-font,
+                400,
+                normal,
+                left
+              );
+            }
+
+            div.flex-center {
+              width: 100%;
+              justify-content: space-between;
+
+              span {
+                @include font(
+                  clamp(30px, 3vw, 64px),
+                  $black-color,
+                  $primary-font
+                );
+              }
+
+              button {
+                @include button(
+                  16px,
+                  $black-color,
+                  10px 40px,
+                  transparent,
+                  1px solid $black-color,
+                  $white-color
+                );
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 

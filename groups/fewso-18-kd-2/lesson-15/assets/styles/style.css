@@ -7,9 +7,11 @@ body {
 
 .flex-center {
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  align-content: flex-start;
   gap: 0;
 }
 
@@ -106,6 +108,7 @@ main section.banner div.overlay article div.flex-center a {
 main section.banner div.overlay article div.flex-center a:hover {
   background-color: #273a4e;
   border-color: transparent;
+  color: #fff;
 }
 main section.portfolio {
   display: grid;
@@ -161,6 +164,7 @@ main section.portfolio article aside div.overlay a {
 main section.portfolio article aside div.overlay a:hover {
   background-color: #273a4e;
   border-color: transparent;
+  color: #fff;
 }
 main section.about {
   display: grid;
@@ -179,9 +183,11 @@ main section.about aside {
   background-color: #f0f3f6;
   padding: 25px;
   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  align-content: flex-start;
   gap: 20px;
 }
 main section.about aside h1,
@@ -215,6 +221,100 @@ main section.about aside p {
   font-style: normal;
   color: #303131;
   text-align: left;
+}
+main section.books {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  gap: 10px;
+}
+main section.books h1 {
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 400;
+  font-family: "Cinzel", serif;
+  font-style: normal;
+  color: #303131;
+  text-align: center;
+}
+main section.books article {
+  width: 100%;
+  background-color: #f0f3f6;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 0;
+  padding: 50px;
+}
+main section.books article div.wrap {
+  width: 100%;
+  max-width: 970px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+main section.books article div.wrap img {
+  width: 100%;
+  min-height: 430px;
+  height: 100%;
+  object-fit: cover;
+}
+main section.books article div.wrap aside {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 5px;
+}
+main section.books article div.wrap aside h2 {
+  width: 100%;
+  font-size: clamp(30px, 3vw, 64px);
+  font-weight: 400;
+  font-family: "Cinzel", serif;
+  font-style: normal;
+  color: #303131;
+  text-align: left;
+}
+main section.books article div.wrap aside p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #303131;
+  text-align: left;
+}
+main section.books article div.wrap aside div.flex-center {
+  width: 100%;
+  justify-content: space-between;
+}
+main section.books article div.wrap aside div.flex-center span {
+  font-size: clamp(30px, 3vw, 64px);
+  font-weight: 400;
+  font-family: "Cinzel", serif;
+  font-style: normal;
+  color: #303131;
+  text-align: center;
+}
+main section.books article div.wrap aside div.flex-center button {
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #303131;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 10px 40px;
+  border: 1px solid #303131;
+  transition: 0.5s ease;
+}
+main section.books article div.wrap aside div.flex-center button:hover {
+  background-color: #273a4e;
+  border-color: transparent;
+  color: #fff;
 }
 
 footer {
