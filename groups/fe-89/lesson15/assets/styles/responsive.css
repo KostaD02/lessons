@@ -1,0 +1,38 @@
+@media screen and (max-width: 1024px) {
+  main section.portfolio article {
+    grid-template-columns: 1fr;
+  }
+  main section.portfolio article aside div.overlay {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    gap: 25px;
+  }
+  main section.portfolio article aside div.overlay h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 990px) {
+  header {
+    padding: 0 10px;
+  }
+  main {
+    padding: 65px 0 0;
+  }
+  main section.banner {
+    height: 600px;
+    background-position: 25%;
+  }
+  main section.portfolio article aside {
+    height: 500px;
+  }
+  div.chat {
+    border-radius: 50%;
+    bottom: 120px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

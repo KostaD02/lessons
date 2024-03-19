@@ -1,0 +1,217 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  color: $black-color;
+}
+
+.flex-center {
+  @include flex;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white-color;
+  padding: 0 80px;
+  box-sizing: border-box;
+  z-index: 100;
+
+  nav {
+    div.container-fluid {
+      a {
+        font-size: 16px;
+        font-family: $secondary-font;
+        color: $black-color;
+        transition: 0.5s ease;
+        font-weight: 300;
+
+        &.active {
+          color: $active-color;
+        }
+
+        &.navbar-brand {
+          font-size: 26px;
+          font-family: $primary-font;
+        }
+
+        &:hover {
+          color: $active-color;
+        }
+      }
+      div.collapse {
+        justify-content: flex-end;
+
+        ul {
+          column-gap: 15px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  padding: 65px 80px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+
+  section {
+    width: 100%;
+
+    div.overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $overlay-transparent-color;
+    }
+
+    &.banner {
+      height: 900px;
+      background-image: url("https://static.wixstatic.com/media/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg/v1/fill/w_2383,h_900,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+
+      article {
+        h1,
+        h2 {
+          letter-spacing: 8px;
+          text-align: center;
+          color: $white-color;
+        }
+
+        h1 {
+          font-size: clamp(25px, 6vw, 70px);
+          font-weight: 300;
+          margin: 0;
+        }
+
+        h2 {
+          font-size: clamp(18px, 3vw, 20px);
+          font-family: $secondary-font;
+          font-weight: 300;
+        }
+
+        div {
+          a {
+            margin-top: 1rem;
+            @include button;
+          }
+        }
+      }
+    }
+
+    &.portfolio {
+      h1,
+      h2 {
+        font-size: clamp(25px, 5vw, 40px);
+        font-weight: 300;
+        color: $black-color;
+        text-align: center;
+      }
+
+      article {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+
+        aside {
+          height: 869px;
+          position: relative;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url("https://static.wixstatic.com/media/f61af8_2ef1fc57fdd849a19df076e8fb6e036f~mv2_d_2681_2546_s_4_2.jpg/v1/fill/w_801,h_869,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_2ef1fc57fdd849a19df076e8fb6e036f~mv2_d_2681_2546_s_4_2.jpg");
+
+          &:nth-child(2) {
+            background-image: url("https://static.wixstatic.com/media/f61af8_0865ef003a1740f9b703014d3b57e3fa~mv2_d_4928_3264_s_4_2.jpg/v1/fill/w_779,h_869,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_0865ef003a1740f9b703014d3b57e3fa~mv2_d_4928_3264_s_4_2.jpg");
+          }
+
+          &:nth-child(3) {
+            background-image: url("https://static.wixstatic.com/media/f61af8_0ecca2bc73f444c98e8de071bb2ce81c~mv2_d_1927_1272_s_2.jpg/v1/fill/w_781,h_869,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_0ecca2bc73f444c98e8de071bb2ce81c~mv2_d_1927_1272_s_2.jpg");
+          }
+
+          div.overlay {
+            h2 {
+              margin-top: 70px;
+              margin-bottom: 1rem;
+              color: $white-color;
+            }
+
+            div.flex-center {
+              a {
+                @include button;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $white-color;
+  padding: 10px 0;
+  margin: 25px 0;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      a {
+        transition: 0.5s ease;
+        color: $black-color;
+        font-size: 20px;
+
+        &:hover {
+          color: $active-color;
+        }
+      }
+    }
+  }
+
+  h5 {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 1rem;
+  }
+}
+
+div.chat {
+  width: 64px;
+  height: 64px;
+  background-color: $pink-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+
+  i {
+    font-size: 30px;
+    color: $white-color;
+  }
+}

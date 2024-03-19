@@ -1,0 +1,56 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@media screen and (max-width: 1024px) {
+  main {
+    section {
+      &.portfolio {
+        article {
+          grid-template-columns: 1fr;
+          aside {
+            div.overlay {
+              flex-direction: column;
+              @include flex;
+              gap: 25px;
+
+              h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  header {
+    padding: 0 10px;
+  }
+
+  main {
+    padding: 65px 0 0;
+
+    section {
+      &.banner {
+        height: 600px;
+        background-position: 25%;
+      }
+
+      &.portfolio {
+        article {
+          aside {
+            height: 500px;
+          }
+        }
+      }
+    }
+  }
+
+  div.chat {
+    border-radius: 50%;
+    bottom: 120px;
+  }
+}

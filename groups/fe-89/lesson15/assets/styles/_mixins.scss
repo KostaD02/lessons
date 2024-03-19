@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+@mixin flex($jc: center, $ai: center, $gap: 0) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+}
+
+@mixin button(
+  $fs: 16px,
+  $color: $white-color,
+  $hover-bg-color: $overlay-color,
+  $padding: 7px 30px
+) {
+  font-size: $fs;
+  color: $color;
+  padding: $padding;
+  border: 1px solid $color;
+  font-family: $secondary-font;
+  background-color: transparent;
+  transition: 0.5s ease;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    border-color: transparent;
+  }
+}
