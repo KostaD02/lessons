@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input-group-text {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.input-group-text:hover {
+  color: var(--bs-blue);
+}
+
+header nav .active {
+  color: var(--bs-blue) !important;
+}
+
+header nav div.container-fluid div.collapse {
+  justify-content: flex-end !important;
+}
+
+main {
+  padding-top: 70px;
+}
+
+.paginator {
+  cursor: pointer;
+  user-select: none;
+}
